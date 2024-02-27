@@ -1,5 +1,9 @@
-# dotfiles for Ubuntu 22.04
+# dotfiles for Ubuntu
 
-These are my Ubuntu config files for all my apps
+Installation and setup scripts for environment & apps
 
+Start process by running:
+```shell
+bash install.sh
+```
 

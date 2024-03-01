@@ -100,6 +100,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias dotfiles="~/dotfiles/"
+alias dev="~/Development/"
+alias ornn="~/Development/ornn/"
+alias employee="~/Development/employee/"
+alias carrier="~/Development/carrier/"
+alias fe="~/Development/mastery-frontend/"
+alias nv="nvim"
+alias up="docker compose up -d"
+alias down="docker compose down"
+
 source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 

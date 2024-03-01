@@ -14,6 +14,11 @@ cat <<"EOF"
 EOF
 echo -e "${NONE}"
 
+# package installation
 source .install/packages/general.sh
 source .install/install-repositories.sh
 source .install/install-packages.sh
+
+# config symlinks
+source .install/symlink.sh
+

@@ -14,8 +14,6 @@ cat <<"EOF"
 EOF
 echo -e "${NONE}"
 
-sudo apt-get install curl git build-essentials
-
 # package managers
 source .install/brew-install.sh
 

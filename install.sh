@@ -29,3 +29,7 @@ source .install/symlink.sh
 
 # zsh
 source .install/zsh-setup.sh
+
+# kubernetes
+source .install/kubernetes/clusters.sh
+

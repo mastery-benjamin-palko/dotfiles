@@ -6,7 +6,6 @@ packagesApt=(
   "git"
   "vim"
   "firefox"
-  "docker"
   "pgadmin4"
 )
 

@@ -1,6 +1,6 @@
 packagesApt=(
   "gcc"
-  "build-essentials"
+  "build-essential"
   "curl"
   "zsh"
   "git"

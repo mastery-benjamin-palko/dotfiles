@@ -10,6 +10,7 @@ packagesApt=(
 
 packagesSnap=(
   "teams-for-linux"
+  "slack"
   "firefox"
   "postman"
   "redisinsight"

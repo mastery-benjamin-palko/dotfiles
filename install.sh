@@ -14,6 +14,11 @@ cat <<"EOF"
 EOF
 echo -e "${NONE}"
 
+sudo apt-get install curl git build-essentials
+
+# package managers
+source .install/brew-setup.sh
+
 # package installation
 source .install/packages/general.sh
 source .install/install-repositories.sh
@@ -22,3 +27,5 @@ source .install/install-packages.sh
 # config symlinks
 source .install/symlink.sh
 
+# zsh
+source .install/zsh-setup.sh

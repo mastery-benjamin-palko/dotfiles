@@ -25,9 +25,15 @@ source .install/install-packages.sh
 # config symlinks
 source .install/symlink.sh
 
-# zsh
-source .install/zsh-setup.sh
-
 # kubernetes
 source .install/azure-setup.sh
+
+# github login
+gh auth login
+
+# set up mastery repos
+source .install/setup-development.sh
+
+# zsh
+source .install/zsh-setup.sh
 

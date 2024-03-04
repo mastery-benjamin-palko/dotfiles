@@ -1,15 +1,42 @@
 #!/bin/bash
 
-# files
-ln -s ~/dotfiles/.zshrc ~/.zshrc
-ln -s ~/dotfiles/.tool-versions ~/.tool-versions
-ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+# dot files
+files=(
+  ".zshrc"
+  ".tool-versions"
+  ".gitconfig"
+)
 
-# directories
-if test -d ~/.config/nvim/; then
-  ls -s ~/dotfiles/nvim/ ~/.config/nvim/
-fi
-if test -d ~/.config/k9s; then
-  ls -s ~/dotfiles/k9s/ ~/.config/k9s/
-fi
+_symlinkFiles() {
+  for file; do
+    if [ -h ~/${file} ]; then
+      continue
+    fi
+    if [ -f ~/${file} ]; then
+      rm ~/${file}
+    fi
+    ln -s ~/dotfiles/${file} ~/${file}
+  done;
+}
 
+# dot config
+configs=(
+  "k9s"
+  "nvim"
+)
+
+_symlinkDirs() {
+  for config; do
+    if [ -h ~/.config/${config} ]; then
+      continue
+    fi
+    if [ -d ~/.config/${config}/ ]; then
+      echo "Deleting existing directory ${config}"
+      rm -rf ~/.config/${config}/
+    fi
+    ln -s ~/dotfiles/${config}/ ~/.config/
+  done;
+}
+
+_symlinkFiles "${files[@]}"
+_symlinkDirs "${configs[@]}"

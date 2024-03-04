@@ -10,7 +10,7 @@ az aks get-credentials --resource-group nonprod-cluster-eastus2 --name aks-hir3j
 az aks get-credentials --resource-group nonprod-cluster-eastus2 --name aks-kdp5t-nonprod --subscription kdp
 az aks get-credentials --resource-group nonprod-cluster-eastus2 --name aks-ls8fm-nonprod --subscription loadsmith
 az aks get-credentials --resource-group nonprod-cluster-centralus --name aks-ml100-nonprod --subscription molo
-az aks get-credentials --resource-group nonprod-cluster-eastus2 --name aks-pep5c-nonprod --subscription pepsia
+az aks get-credentials --resource-group nonprod-cluster-eastus2 --name aks-pep5c-nonprod --subscription pepsi
 az aks get-credentials --resource-group nonprod-cluster-centralus --name aks-pr100-nonprod --subscription prime
 az aks get-credentials --resource-group nonprod-cluster-centralus --name aks-ru100-nonprod --subscription ruan
 az aks get-credentials --resource-group nonprod-cluster-centralus --name aks-sn100-nonprod --subscription schneider

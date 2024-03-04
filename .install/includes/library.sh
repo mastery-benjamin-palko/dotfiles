@@ -25,7 +25,7 @@ _isInstalledApt() {
 
 _isInstalledSnap() {
     package="$1";
-    check="$(snap list "${package}" | grep "${package} ")";
+    check="$(snap list | grep "${package} ")";
     if [ -n "${check}" ] ; then
         echo 0; #'0' means 'true' in Bash
         return; #true

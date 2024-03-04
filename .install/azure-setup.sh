@@ -2,5 +2,5 @@
 
 az login --use-device-code
 
-source kubernetes/cluster.sh
+source kubernetes/clusters.sh
 

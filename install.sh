@@ -29,5 +29,5 @@ source .install/symlink.sh
 source .install/zsh-setup.sh
 
 # kubernetes
-source .install/kubernetes/clusters.sh
+source .install/azure-setup.sh
 

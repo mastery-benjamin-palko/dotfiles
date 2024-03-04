@@ -94,7 +94,7 @@ _installPackagesSnap() {
         return;
     fi;
 
-    #sudo snap install "${toInstall[@]}";
+    sudo snap install "${toInstall[@]}";
 }
 
 _installPackagesBrew() {

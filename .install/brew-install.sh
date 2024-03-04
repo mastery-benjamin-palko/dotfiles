@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # dependencies
-sudo apt-get install curl git build-essential -y
+sudo apt-get install git build-essential -y
 
 # install
 if [[ $(command -v brew) == "" ]]; then

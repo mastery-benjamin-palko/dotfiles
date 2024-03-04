@@ -1,6 +1,6 @@
 #!/bin/bash
 
-az login
+az login --use-device-code
 
 source kubernetes/cluster.sh
 

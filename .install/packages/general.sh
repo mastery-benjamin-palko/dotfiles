@@ -5,11 +5,11 @@ packagesApt=(
   "zsh"
   "git"
   "vim"
-  "firefox"
   "pgadmin4"
 )
 
 packagesSnap=(
+  "firefox"
   "postman"
   "redisinsight"
   "spotify"

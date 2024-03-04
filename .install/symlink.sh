@@ -3,6 +3,7 @@
 # files
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.tool-versions ~/.tool-versions
+ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 
 # directories
 if test -d ~/.config/nvim/; then

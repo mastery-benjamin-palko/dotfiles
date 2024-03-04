@@ -17,7 +17,7 @@ echo -e "${NONE}"
 sudo apt-get install curl git build-essentials
 
 # package managers
-source .install/brew-setup.sh
+source .install/brew-rename.sh
 
 # package installation
 source .install/packages/general.sh

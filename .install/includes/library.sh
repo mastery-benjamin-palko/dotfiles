@@ -14,8 +14,8 @@
 # ------------------------------------------------------
 _isInstalledApt() {
     package="$1";
-    check="$(sudo dpkg -l "${package}" | grep "${package} ")";
-    if [ -n "${check}" ] ; then
+    check=$(dpkg-query -W --showformat='${Status}\n' $package | grep "install ok installed")
+    if [ "${check}" == "" ] ; then
         echo 0; #'0' means 'true' in Bash
         return; #true
     fi;

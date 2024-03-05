@@ -3,6 +3,7 @@
 # dot files
 files=(
   ".zshrc"
+  ".bashrc"
   ".tool-versions"
   ".gitconfig"
 )

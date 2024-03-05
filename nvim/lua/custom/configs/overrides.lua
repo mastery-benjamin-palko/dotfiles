@@ -30,8 +30,10 @@ M.mason = {
     -- web dev stuff
     "css-lsp",
     "html-lsp",
+    "tailwindcss-language-server",
     "typescript-language-server",
     "prettier",
+    "eslint-lsp",
 
     -- c/cpp stuff
     "clangd",
@@ -39,6 +41,7 @@ M.mason = {
 
     -- shell stuff
     "shfmt",
+    "bash-language-server"
   },
 }
 

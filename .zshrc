@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git asdf brew docker gh kubectl yarn)
+plugins=(git brew docker gh kubectl yarn)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -114,4 +114,6 @@ alias down="docker compose down"
 
 source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+. /home/linuxbrew/.linuxbrew/opt/asdf/libexec/asdf.sh
 

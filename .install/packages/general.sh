@@ -14,6 +14,8 @@ packagesApt=(
   "docker-buildx-plugin"
   "docker-compose-plugin"
   "1password"
+  "gnome-tweaks"
+  "gnome-shell-extension-manager"
 )
 
 packagesSnap=(

@@ -40,5 +40,26 @@ _symlinkDirs() {
   done;
 }
 
+# gnome-looks
+gnome=(
+  ".themes"
+  ".icons"
+)
+
+_symlinkGnome() {
+  for config; do
+    if [ -h ~/${config} ]; then
+      continue
+    fi
+    if [ -d ~/${config}/ ]; then
+      echo "Deleting existing directory ${config}"
+      rm -rf ~/${config}/
+    fi
+    ln -s ~/dotfiles/${config}/ ~/
+  done;
+}
+
 _symlinkFiles "${files[@]}"
 _symlinkDirs "${configs[@]}"
+_symlinkGnome "${gnome[@]}"
+

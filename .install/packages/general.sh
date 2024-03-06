@@ -1,5 +1,6 @@
 packagesApt=(
   "gcc"
+  "xclip"
   "build-essential"
   "curl"
   "zsh"
@@ -11,6 +12,7 @@ packagesApt=(
   "containerd.io"
   "docker-buildx-plugin"
   "docker-compose-plugin"
+  "1password"
 )
 
 packagesSnap=(

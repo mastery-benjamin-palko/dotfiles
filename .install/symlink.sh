@@ -23,6 +23,7 @@ _symlinkFiles() {
 # dot config
 configs=(
   "k9s"
+  "neofetch"
   "nvim"
 )
 

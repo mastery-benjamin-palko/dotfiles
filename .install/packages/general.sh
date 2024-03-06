@@ -1,6 +1,7 @@
 packagesApt=(
   "gcc"
   "xclip"
+  "neofetch"
   "build-essential"
   "curl"
   "zsh"

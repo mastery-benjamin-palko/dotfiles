@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # dev/test
+az aks get-credentials --resource-group nonprod-cluster-centralus --name aks-mm100-nonprod --subscription masteryinternal
 az aks get-credentials --resource-group nonprod-cluster-eastus2 --name aks-ave4u-nonprod --subscription averitt
 az aks get-credentials --resource-group nonprod-cluster-eastus2 --name aks-cgl60-nonprod --subscription cargill
 az aks get-credentials --resource-group nonprod-cluster-eastus2 --name aks-cat7x-nonprod --subscription cat

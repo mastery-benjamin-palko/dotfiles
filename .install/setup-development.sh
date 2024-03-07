@@ -6,6 +6,7 @@ if [ ! -d "${dev}" ]; then
   mkdir $dev
 fi
 
+git clone https://github.com/masterysystems/record-management-db-migrations.git ${dev}/record-management-db-migrations
 git clone https://github.com/masterysystems/carrier.git ${dev}/carrier
 git clone https://github.com/masterysystems/customer.git ${dev}/customer
 git clone https://github.com/masterysystems/employee.git ${dev}/employee

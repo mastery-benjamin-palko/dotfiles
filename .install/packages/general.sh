@@ -32,6 +32,7 @@ packagesBrew=(
   "zsh-syntax-highlighting"
   "gh"
   "lazygit"
+  "glow"
   "asdf"
   "kubernetes-cli"
   "azure-cli"

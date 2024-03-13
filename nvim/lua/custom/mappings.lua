@@ -16,14 +16,14 @@ M.general = {
       function()
         require("base46").toggle_transparency()
       end,
-      "toggle transparency"
+      "toggle transparency",
     },
 
     ["<leader>te"] = {
       function()
         require("base46").toggle_theme()
       end,
-      "toggle theme"
+      "toggle theme",
     },
 
     ["[t"] = { ":tabprevious<CR>", "previous tab" },
@@ -34,18 +34,25 @@ M.general = {
       function()
         require("custom.terminals.lazygit").toggle()
       end,
-      "Lazy Git"
+      "Lazy Git",
     },
 
     ["k9"] = {
       function()
         require("custom.terminals.k9s").toggle()
       end,
-      "K9S"
+      "K9S",
+    },
+
+    ["md"] = {
+      function()
+        require("custom.terminals.glow").toggle()
+      end,
+      "Glow",
     },
   },
   v = {
-    [">"] = { ">gv", "indent"},
+    [">"] = { ">gv", "indent" },
   },
 }
 

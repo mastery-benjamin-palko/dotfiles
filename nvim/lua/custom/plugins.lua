@@ -5,6 +5,16 @@ local plugins = {
 
   -- Override plugin definition options
 
+  -- override plugin configs
+  {
+    "williamboman/mason.nvim",
+    opts = overrides.mason,
+  },
+
+  {
+    "williamboman/mason-lspconfig.nvim",
+  },
+
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -13,10 +23,11 @@ local plugins = {
     end, -- Override to setup mason-lspconfig
   },
 
-  -- override plugin configs
   {
-    "williamboman/mason.nvim",
-    opts = overrides.mason,
+    "pmizio/typescript-tools.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    lazy = false,
+    opts = {},
   },
 
   {
@@ -67,7 +78,7 @@ local plugins = {
   {
     "b0o/schemastore.nvim",
     version = "*",
-  }
+  },
 
   -- To make a plugin not be loaded
   -- {

@@ -118,6 +118,14 @@ local default_plugins = {
   },
 
   {
+    "williamboman/mason-lspconfig.nvim",
+    lazy = false,
+    config = function(_, opts)
+      require("mason-lspconfig").setup()
+    end,
+  },
+
+  {
     "neovim/nvim-lspconfig",
     event = "User FilePost",
     config = function()

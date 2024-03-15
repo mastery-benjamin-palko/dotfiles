@@ -120,3 +120,5 @@ source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 neofetch
 
+
+export PATH=$PATH:/home/benjaminpalko/.spicetify

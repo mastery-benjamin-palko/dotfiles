@@ -14,6 +14,7 @@ packagesApt=(
   "docker-buildx-plugin"
   "docker-compose-plugin"
   "1password"
+  "spotify-client"
   "gnome-tweaks"
   "gnome-shell-extension-manager"
 )

@@ -1,0 +1,3 @@
+
+wal -i ~/Pictures/Wallpaper/ & gsettings set org.gnome.desktop.background picture-uri-dark "file://$(cat ~/.cache/wal/wal)"
+

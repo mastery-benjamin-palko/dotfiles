@@ -4,7 +4,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export EDITOR="nvim"
-
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -116,9 +115,12 @@ alias down="docker compose down"
 source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+. "$HOME/.cargo/env"
 . /home/linuxbrew/.linuxbrew/opt/asdf/libexec/asdf.sh
+(cat ~/.cache/wal/sequences &)
 
 neofetch
 
-
 export PATH=$PATH:/home/benjaminpalko/.spicetify
+export PATH="${PATH}:${HOME}/.local/bin/"
+

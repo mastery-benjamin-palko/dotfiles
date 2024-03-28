@@ -42,6 +42,17 @@ end, { desc = "Glow" })
 map("t", "<C-k>", function()
   local win = vim.api.nvim_get_current_win()
   vim.api.nvim_win_close(win, true)
-end)
+end, { desc = "Close Terminal" })
+
+-- Testing
+
+map("n", "<leader>mr", function()
+  require("neotest").run.run(vim.fn.expand("%"))
+end, { desc = "Test - Run Nearest" })
+
+map("n", "<leader>mw", function()
+  require("neotest").watch.toggle(vim.fn.expand("%"))
+  require("neotest").summary.toggle()
+end, { desc = "Test - Watch" })
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")

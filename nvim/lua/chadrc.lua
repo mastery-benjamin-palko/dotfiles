@@ -22,6 +22,19 @@ M.ui = {
   nvdash = {
     load_on_startup = true,
   },
+
+  term = {
+    hl = "Normal:term,WinSeparator:WinSeparator",
+    sizes = { sp = 0.3, vsp = 0.2 },
+    float = {
+      relative = "editor",
+      row = 0.15,
+      col = 0.10,
+      width = 0.8,
+      height = 0.7,
+      border = "single",
+    },
+  },
 }
 
 return M

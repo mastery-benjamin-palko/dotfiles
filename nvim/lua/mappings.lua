@@ -39,20 +39,15 @@ map("n", "md", function()
   require("nvchad.term").toggle { pos = "float", id = "glow", cmd = "glow" }
 end, { desc = "Glow" })
 
-map("t", "<C-k>", function()
+map("t", "<C-q>", function()
   local win = vim.api.nvim_get_current_win()
   vim.api.nvim_win_close(win, true)
 end, { desc = "Close Terminal" })
 
 -- Testing
 
-map("n", "<leader>mr", function()
-  require("neotest").run.run(vim.fn.expand("%"))
-end, { desc = "Test - Run Nearest" })
-
-map("n", "<leader>mw", function()
-  require("neotest").watch.toggle(vim.fn.expand("%"))
+map("n", "<leader>ts", function()
   require("neotest").summary.toggle()
-end, { desc = "Test - Watch" })
+end, { desc = "Test - Summary" })
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")

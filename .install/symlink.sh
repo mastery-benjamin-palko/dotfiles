@@ -25,6 +25,7 @@ configs=(
   "k9s"
   "neofetch"
   "nvim"
+  "teams-for-linux"
   "wal"
 )
 

@@ -39,5 +39,6 @@ packagesBrew=(
   "azure-cli"
   "Azure/kubelogin/kubelogin"
   "k9s"
+  "jesseduffield/lazydocker/lazydocker"
 )
 

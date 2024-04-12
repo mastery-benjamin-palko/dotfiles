@@ -5,16 +5,35 @@ local capabilities = require("nvchad.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
 local servers = {
+  -- bash
+  "bashls",
+
+  -- webdev
   "html",
   "cssls",
+  "cssmodules_ls",
   "tailwindcss",
-  "jsonls",
-  "yamlls",
-  "dockerls",
-  "docker_compose_language_service",
   "eslint",
   "graphql",
+
+  -- go
+  "gopls",
+
+  -- python
+  "pylsp",
+
+  -- config
+  "jsonls",
+  "yamlls",
+
+  -- docker
+  "dockerls",
+  "docker_compose_language_service",
+
+  -- markdown
   "marksman",
+
+  -- sql
   "sqls",
 }
 

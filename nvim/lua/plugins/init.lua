@@ -18,15 +18,41 @@ return {
         -- web dev
         "html-lsp",
         "css-lsp",
+        "css-variables-language-server",
         "prettier",
         "tailwindcss-language-server",
         "eslint-lsp",
+        "graphql-language-service-cli",
+        "js-debug-adapter",
 
         -- shell
         "shfmt",
         "bash-language-server",
+        "bash-debug-adapter",
+
+        -- docker
+        "docker-compose-language-server",
+        "dockerfile-language-server",
+
+        -- go
+        "gopls",
+        "go-debug-adapter",
 
         -- python
+        "debugpy",
+
+        -- web debug
+        "firefox-debug-adapter",
+
+        -- markdown
+        "marksman",
+
+        -- sql
+        "sqls",
+
+        -- configs
+        "json-lsp",
+        "yaml-language-server"
       },
     },
   },
@@ -79,6 +105,7 @@ return {
         "jsonc",
         "yaml",
         "graphql",
+        "go",
         "bash",
         "dockerfile",
         "gitignore",

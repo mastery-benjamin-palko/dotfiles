@@ -25,8 +25,31 @@ return {
         -- shell
         "shfmt",
         "bash-language-server",
+
+        -- python
       },
     },
+  },
+
+  {
+    "mfussenegger/nvim-dap",
+  },
+
+  {
+    "jay-babu/mason-nvim-dap.nvim",
+    dependencies = "mason.nvim",
+    cmd = { "DapInstall", "DapUninstall" },
+    opts = {
+      automatic_installation = true,
+      ensure_installed = { "js", "firefox", "bash", "python" },
+    },
+  },
+
+  {
+    "williamboman/mason-lspconfig.nvim",
+    config = function()
+      require("mason-lspconfig").setup()
+    end,
   },
 
   {

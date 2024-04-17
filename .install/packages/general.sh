@@ -17,15 +17,14 @@ packagesApt=(
   "spotify-client"
   "gnome-tweaks"
   "gnome-shell-extension-manager"
+  "teams-for-linux"
 )
 
-packagesSnap=(
-  "teams-for-linux"
+packagesFlatpak=(
   "slack"
   "firefox"
   "postman"
   "redisinsight"
-  "spotify"
 )
 
 packagesBrew=(

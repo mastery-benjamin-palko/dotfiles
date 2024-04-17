@@ -3,8 +3,8 @@
 echo "Installing apt packages..."
 _installPackagesApt "${packagesApt[@]}";
 
-echo "Installing snap packages..."
-_installPackagesSnap "${packagesSnap[@]}";
+echo "Installing flatpak packages..."
+_installPackagesFlatpak "${packagesFlatpak[@]}";
 
 echo "Installing brew packages..."
 _installPackagesBrew "${packagesBrew[@]}";

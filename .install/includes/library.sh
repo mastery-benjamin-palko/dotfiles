@@ -23,6 +23,17 @@ _isInstalledApt() {
     return; #false
 }
 
+_isInstalledFlatpak() {
+    package="$1";
+    check="$(flatpak list | grep "${package} ")";
+    if [ -n "${check}" ] ; then
+        echo 0; #'0' means 'true' in Bash
+        return; #true
+    fi;
+    echo 1; #'1' means 'false' in Bash
+    return; #false
+}
+
 _isInstalledSnap() {
     package="$1";
     check="$(snap list | grep "${package} ")";
@@ -77,6 +88,24 @@ _installPackagesApt() {
     fi;
 
     sudo apt-get install "${toInstall[@]}" -y;
+}
+
+_installPackagesFlatpak() {
+    toInstall=();
+    for pkg; do
+        if [[ $(_isInstalledFlatpak "${pkg}") == 0 ]]; then
+            echo ":: ${pkg} is already installed.";
+            continue;
+        fi;
+        toInstall+=("${pkg}");
+    done;
+
+    if [[ "${toInstall[@]}" == "" ]] ; then
+        echo "All flatpak packages are already installed.";
+        return;
+    fi;
+
+    flatpak install "${toInstall[@]}" -y;
 }
 
 _installPackagesSnap() {

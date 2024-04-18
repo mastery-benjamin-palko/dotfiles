@@ -7,6 +7,8 @@ packagesApt=(
   "zsh"
   "git"
   "vim"
+  "nvim"
+  "firefox"
   "pgadmin4"
   "docker-ce"
   "docker-ce-cli"
@@ -22,7 +24,6 @@ packagesApt=(
 
 packagesFlatpak=(
   "slack"
-  "firefox"
   "postman"
   "redisinsight"
 )

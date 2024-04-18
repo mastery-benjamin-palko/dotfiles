@@ -3,3 +3,6 @@
 .icons
 .themes
 
+# teams-for-linux
+teams-for-linux/*
+!teams-for-linux/config.json

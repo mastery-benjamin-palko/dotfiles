@@ -55,6 +55,11 @@ sudo wget -qO /etc/apt/keyrings/teams-for-linux.asc https://repo.teamsforlinux.d
 
 echo "deb [signed-by=/etc/apt/keyrings/teams-for-linux.asc arch=$(dpkg --print-architecture)] https://repo.teamsforlinux.de/debian/ stable main" | sudo tee /etc/apt/sources.list.d/teams-for-linux-packages.list
 
+# Insomnia
+curl -1sLf \
+  'https://packages.konghq.com/public/insomnia/setup.deb.sh' \
+  | sudo -E distro=ubuntu codename=focal bash
+
 #
 # UPDATE APT
 # 

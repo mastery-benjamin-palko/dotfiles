@@ -6,7 +6,6 @@ packagesApt=(
   "curl"
   "zsh"
   "git"
-  "vim"
   "nvim"
   "firefox"
   "pgadmin4"
@@ -20,11 +19,11 @@ packagesApt=(
   "gnome-tweaks"
   "gnome-shell-extension-manager"
   "teams-for-linux"
+  "insomnia"
 )
 
 packagesFlatpak=(
   "slack"
-  "postman"
   "redisinsight"
 )
 
@@ -33,7 +32,6 @@ packagesBrew=(
   "zsh-syntax-highlighting"
   "gh"
   "lazygit"
-  "glow"
   "asdf"
   "kubernetes-cli"
   "azure-cli"

@@ -18,8 +18,8 @@ echo -e "${NONE}"
 source .install/brew-install.sh
 
 # package installation
-source .install/packages/general.sh
 source .install/install-repositories.sh
+source .install/packages/general.sh
 source .install/install-packages.sh
 
 # config symlinks

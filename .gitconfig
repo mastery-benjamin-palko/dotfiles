@@ -8,4 +8,4 @@
 	name = Benjamin Palko
 	email = ext.benjamin.palko@mastery.net
 [core]
-	editor = vim
+	editor = nvim

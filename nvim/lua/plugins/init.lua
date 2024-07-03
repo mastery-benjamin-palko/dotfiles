@@ -3,14 +3,14 @@ local js_based_languages = { "typescript", "javascript", "typescriptreact" }
 for _, language in ipairs(js_based_languages) do
   require("dap").configurations[language] = {
     {
-      type = "node",
+      type = "pwa-node",
       request = "launch",
       name = "Launch file",
       program = "${file}",
       cwd = "${workspaceFolder}",
     },
     {
-      type = "node",
+      type = "pwa-node",
       request = "launch",
       name = "Launch via Yarn",
       runtimeExecutable = "yarn",
@@ -22,7 +22,7 @@ for _, language in ipairs(js_based_languages) do
       },
     },
     {
-      type = "node",
+      type = "pwa-node",
       request = "attach",
       name = "Attach to Remote",
       address = "localhost",
@@ -38,9 +38,4 @@ for _, language in ipairs(js_based_languages) do
 end
 
 return {
-  -- {
-  --   "pmizio/typescript-tools.nvim",
-  --   dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-  --   opts = {},
-  -- },
 }

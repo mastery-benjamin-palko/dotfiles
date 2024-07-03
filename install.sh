@@ -34,3 +34,9 @@ source .install/setup-development.sh
 # zsh
 source .install/zsh-setup.sh
 
+# Install tools
+asdf install
+
+# Pywal
+source .install/install-pywal.sh
+

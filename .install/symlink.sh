@@ -2,10 +2,11 @@
 
 # dot files
 files=(
-  ".zshrc"
   ".bashrc"
-  ".tool-versions"
+  ".bunfig.toml"
   ".gitconfig"
+  ".tool-versions"
+  ".zshrc"
 )
 
 _symlinkFiles() {

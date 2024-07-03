@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# github login
+gh auth login
+
 dev=~/Development
 if [ ! -d "${dev}" ]; then
   echo "Creating development directory: $dev"

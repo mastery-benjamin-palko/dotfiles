@@ -28,9 +28,6 @@ source .install/symlink.sh
 # kubernetes
 source .install/azure-setup.sh
 
-# github login
-gh auth login
-
 # set up mastery repos
 source .install/setup-development.sh
 

@@ -8,6 +8,7 @@ packagesApt=(
   "git"
   "nvim"
   "firefox"
+  "google-chrome-stable"
   "pgadmin4"
   "docker-ce"
   "docker-ce-cli"

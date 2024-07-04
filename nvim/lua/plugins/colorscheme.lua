@@ -1,21 +1,31 @@
 return {
   {
     "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
     opts = {
-      transparent = true,
-      styles = {
-        sidebars = "transparent",
-        floats = "transparent",
-      },
+      style = "storm"
+      --transparent = true,
+      --styles = {
+      --sidebars = "transparent",
+      --floats = "transparent",
+      --},
     },
+  },
+  {
+    "catppuccin/nvim",
+    lazy = true,
+    name = "catppuccin",
+    opts = {
+      flavour = "mocha"
+    }
   },
   {
     "ellisonleao/gruvbox.nvim",
     opts = {
-      transparent_mode = true,
+      --transparent_mode = true,
     },
   },
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   {
     "neanias/everforest-nvim",
     version = false,
@@ -31,7 +41,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "everforest",
+      colorscheme = "catppuccin",
     },
   },
 }

@@ -121,6 +121,7 @@ alias dev="yarn start:dev"
 alias up="docker compose up -d"
 alias down="docker compose down"
 alias clear="clear && neofetch"
+alias pywal="bash ~/dotfiles/.scripts/change-wallpaper.sh"
 
 source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

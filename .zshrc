@@ -110,14 +110,12 @@ source $ZSH/oh-my-zsh.sh
 alias home="$HOME"
 alias dotfiles="~/dotfiles/"
 alias development="~/Development/"
-alias ornn="~/Development/ornn/"
 alias carrier="~/Development/carrier/"
 alias customer="~/Development/customer/"
 alias fe="~/Development/mastery-frontend/"
 alias employee="~/Development/employee/"
 alias facility="~/Development/facility/"
 alias nv="nvim"
-alias dev="yarn start:dev"
 alias up="docker compose up -d"
 alias down="docker compose down"
 alias clear="clear && neofetch"
@@ -132,7 +130,6 @@ source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 neofetch
 
-export PATH=$PATH:/home/benjaminpalko/.spicetify
 export PATH="${PATH}:${HOME}/.local/bin/"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

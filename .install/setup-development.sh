@@ -1,18 +1,28 @@
 #!/bin/bash
 
 # github login
-gh auth login
+if ! gh auth status >/dev/null 2>&1; then
+  gh auth login
+fi
 
 dev=~/Development
-if [ ! -d "${dev}" ]; then
+repos=(
+  "record-management-db-migrations"
+  "carrier"
+  "customer"
+  "employee"
+  "facility"
+  "mastery-frontend"
+)
+if [ ! -d ${dev} ]; then
   echo "Creating development directory: $dev"
   mkdir $dev
 fi
 
-git clone https://github.com/masterysystems/record-management-db-migrations.git ${dev}/record-management-db-migrations
-git clone https://github.com/masterysystems/carrier.git ${dev}/carrier
-git clone https://github.com/masterysystems/customer.git ${dev}/customer
-git clone https://github.com/masterysystems/employee.git ${dev}/employee
-git clone https://github.com/masterysystems/facility.git ${dev}/facility
-git clone https://github.com/masterysystems/mastery-frontend.git ${dev}/mastery-frontend
-
+for repo in "${repos[@]}"; do
+  dir=${dev}/${repo}
+  if [ ! -d "${dir}" ]; then
+    echo "Pulling ${repo}"
+    git clone "https://github.com/masterysystems/${repo}.git" "${dir}"
+  fi
+done

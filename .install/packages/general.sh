@@ -6,7 +6,7 @@ packagesApt=(
   "curl"
   "zsh"
   "git"
-  "nvim"
+  "neovim"
   "firefox"
   "google-chrome-stable"
   "pgadmin4"

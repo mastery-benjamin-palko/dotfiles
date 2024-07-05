@@ -86,7 +86,7 @@ _installPackagesApt() {
         echo "All apt packages are already installed.";
         return;
     fi;
-
+    echo "Installing packages" "${toInstall[@]}"
     sudo apt-get install "${toInstall[@]}" -y;
 }
 

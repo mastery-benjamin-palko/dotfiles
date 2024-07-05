@@ -35,6 +35,11 @@ source .install/setup-development.sh
 source .install/zsh-setup.sh
 
 # Install tools
+asdf plugin add nodejs
+asdf plugin add bun
+asdf plugin add yarn
+asdf plugin add python
+asdf plugin add golang
 asdf install
 
 # Pywal

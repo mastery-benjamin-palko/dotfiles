@@ -120,6 +120,4 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 . "/home/linuxbrew/.linuxbrew/opt/asdf/libexec/asdf.sh"
 . "/home/linuxbrew/.linuxbrew/opt/asdf/etc/bash_completion.d/asdf.bash"
 
-. "$HOME/.cargo/env"
-
 neofetch

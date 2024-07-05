@@ -1,4 +1,5 @@
 packagesApt=(
+  "flatpak"
   "gcc"
   "xclip"
   "neofetch"

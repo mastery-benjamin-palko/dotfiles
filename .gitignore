@@ -2,6 +2,7 @@
 # gtk-theming
 .icons
 .themes
+.temp
 
 # teams-for-linux
 teams-for-linux/*

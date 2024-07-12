@@ -38,4 +38,12 @@ for _, language in ipairs(js_based_languages) do
 end
 
 return {
+  {
+    "stevearc/conform.nvim",
+    opts = {
+      formatters_by_ft = {
+        nix = { "nixfmt" },
+      },
+    },
+  },
 }

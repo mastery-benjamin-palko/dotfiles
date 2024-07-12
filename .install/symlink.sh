@@ -11,20 +11,22 @@ files=(
 
 _symlinkFiles() {
   for file; do
-    if [ -h ~/${file} ]; then
+    if [ -h ~/"${file}" ]; then
       continue
     fi
-    if [ -f ~/${file} ]; then
-      rm ~/${file}
+    if [ -f ~/"${file}" ]; then
+      rm ~/"${file}"
     fi
-    ln -s ~/dotfiles/${file} ~/${file}
+    ln -s ~/dotfiles/"${file}" ~/"${file}"
   done;
 }
 
 # dot config
 configs=(
+  "home-manager"
   "k9s"
   "neofetch"
+  "nixpkgs"
   "nvim"
   "teams-for-linux"
   "wal"
@@ -32,14 +34,14 @@ configs=(
 
 _symlinkDirs() {
   for config; do
-    if [ -h ~/.config/${config} ]; then
+    if [ -h ~/.config/"${config}" ]; then
       continue
     fi
-    if [ -d ~/.config/${config}/ ]; then
+    if [ -d ~/.config/"${config}"/ ]; then
       echo "Deleting existing directory ${config}"
-      rm -rf ~/.config/${config}/
+      rm -rf ~/.config/"${config}"/
     fi
-    ln -s ~/dotfiles/${config}/ ~/.config/
+    ln -s ~/dotfiles/"${config}"/ ~/.config/
   done;
 }
 
@@ -51,14 +53,14 @@ gnome=(
 
 _symlinkGnome() {
   for config; do
-    if [ -h ~/${config} ]; then
+    if [ -h ~/"${config}" ]; then
       continue
     fi
-    if [ -d ~/${config}/ ]; then
+    if [ -d ~/"${config}"/ ]; then
       echo "Deleting existing directory ${config}"
-      rm -rf ~/${config}/
+      rm -rf ~/"${config}"/
     fi
-    ln -s ~/dotfiles/${config}/ ~/
+    ln -s ~/dotfiles/"${config}"/ ~/
   done;
 }
 

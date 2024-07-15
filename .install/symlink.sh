@@ -2,11 +2,9 @@
 
 # dot files
 files=(
-  ".bashrc"
   ".bunfig.toml"
   ".gitconfig"
   ".tool-versions"
-  ".zshrc"
 )
 
 _symlinkFiles() {
@@ -27,7 +25,6 @@ configs=(
   "k9s"
   "neofetch"
   "nixpkgs"
-  "nvim"
   "teams-for-linux"
   "wal"
 )

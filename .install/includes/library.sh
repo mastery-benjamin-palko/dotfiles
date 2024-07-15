@@ -70,6 +70,57 @@ _isFolderEmpty() {
 }
 
 # ------------------------------------------------------
+# Function Un-install all packages
+# ------------------------------------------------------
+_uninstallPackagesApt() {
+  toUninstall=();
+    for pkg; do
+        if [[ $(_isInstalledApt "${pkg}") == 0 ]]; then
+            toUninstall+=("${pkg}");
+        fi;
+    done;
+
+    if [[ "${toUninstall[*]}" == "" ]] ; then
+        echo "No apt packages to un-install.";
+        return;
+    fi;
+    echo "Uninstalling packages" "${toUninstall[@]}"
+    sudo apt-get install "${toUninstall[@]}" -y;
+}
+
+_uninstallPackagesFlatpak() {
+  toUninstall=();
+    for pkg; do
+        if [[ $(_isInstalledApt "${pkg}") == 0 ]]; then
+            toUninstall+=("${pkg}");
+        fi;
+    done;
+
+    if [[ "${toUninstall[*]}" == "" ]] ; then
+        echo "No apt packages to un-install.";
+        return;
+    fi;
+    echo "Uninstalling packages" "${toUninstall[@]}"
+    flatpak uninstall "${toUninstall[@]}";
+}
+
+_uninstallPackagesBrew() {
+  toUninstall=();
+    for pkg; do
+        if [[ $(_isInstalledApt "${pkg}") == 0 ]]; then
+            toUninstall+=("${pkg}");
+        fi;
+    done;
+
+    if [[ "${toUninstall[*]}" == "" ]] ; then
+        echo "No apt packages to un-install.";
+        return;
+    fi;
+    echo "Uninstalling packages" "${toUninstall[@]}"
+    brew remove "${toUninstall[@]}";
+}
+
+# ------------------------------------------------------
 # Function Install all package if not installed
 # ------------------------------------------------------
 _installPackagesApt() {
@@ -82,7 +133,7 @@ _installPackagesApt() {
         toInstall+=("${pkg}");
     done;
 
-    if [[ "${toInstall[@]}" == "" ]] ; then
+    if [[ "${toInstall[*]}" == "" ]] ; then
         echo "All apt packages are already installed.";
         return;
     fi;
@@ -100,7 +151,7 @@ _installPackagesFlatpak() {
         toInstall+=("${pkg}");
     done;
 
-    if [[ "${toInstall[@]}" == "" ]] ; then
+    if [[ "${toInstall[*]}" == "" ]] ; then
         echo "All flatpak packages are already installed.";
         return;
     fi;
@@ -118,7 +169,7 @@ _installPackagesSnap() {
         toInstall+=("${pkg}");
     done;
 
-    if [[ "${toInstall[@]}" == "" ]] ; then
+    if [[ "${toInstall[*]}" == "" ]] ; then
         echo "All snap packages are already installed.";
         return;
     fi;
@@ -136,7 +187,7 @@ _installPackagesBrew() {
         toInstall+=("${pkg}");
     done;
 
-    if [[ "${toInstall[@]}" == "" ]] ; then
+    if [[ "${toInstall[*]}" == "" ]] ; then
         echo "All brew packages are already installed.";
         return;
     fi;

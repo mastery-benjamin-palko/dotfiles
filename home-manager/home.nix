@@ -12,7 +12,7 @@ in {
   home.homeDirectory = "/home/${username}";
 
   imports = [
-    ./zsh.nix
+    ./terminal.nix
   ];
 
   # This value determines the Home Manager release that your configuration is

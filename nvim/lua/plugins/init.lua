@@ -15,11 +15,13 @@ for _, language in ipairs(js_based_languages) do
       name = "Launch via Yarn",
       runtimeExecutable = "yarn",
       cwd = "${workspaceFolder}",
-      port = 5858,
+      -- port = 5858,
       preLaunchTask = "tsc: build - tsconfig.json",
+      sourceMaps = true,
       outFiles = {
         "${workspaceFolder}/dist/**/*.js",
       },
+      skipFiles = { "<node_internals>/**/*" },
     },
     {
       type = "pwa-node",
@@ -29,7 +31,7 @@ for _, language in ipairs(js_based_languages) do
       port = 9229,
       localRoot = "${workspaceFolder}/dist",
       remoteRoot = "/opt/carrier/dist",
-      preLaunchTask = "tsc: build - tsconfig.json",
+      -- preLaunchTask = "tsc: build - tsconfig.json",
       outFiles = { "${workspaceFolder}/dist/**/*", "!**/node_modules/**" },
       skipFiles = { "<node_internals>/**/*" },
       sourceMaps = true,

@@ -2,12 +2,12 @@ packagesApt=(
   "flatpak"
   "gcc"
   "xclip"
-  "neofetch"
+  "neofetch" #
   "build-essential"
   "curl"
-  "zsh"
-  "git"
-  "neovim"
+  "zsh" #
+  "git" #
+  "neovim" #
   "firefox"
   "google-chrome-stable"
   "pgadmin4"
@@ -30,11 +30,11 @@ packagesFlatpak=(
 )
 
 packagesBrew=(
-  "zsh-autosuggestions"
-  "zsh-syntax-highlighting"
-  "gh"
-  "lazygit"
-  "asdf"
+  "zsh-autosuggestions" #
+  "zsh-syntax-highlighting" #
+  "gh" #
+  "lazygit" #
+  "asdf" #
   "kubernetes-cli"
   "azure-cli"
   "Azure/kubelogin/kubelogin"

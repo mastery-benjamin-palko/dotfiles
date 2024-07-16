@@ -3,8 +3,6 @@
 # dot files
 files=(
   ".bunfig.toml"
-  ".gitconfig"
-  ".tool-versions"
 )
 
 _symlinkFiles() {

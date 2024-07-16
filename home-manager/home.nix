@@ -12,6 +12,7 @@ in {
   home.homeDirectory = "/home/${username}";
 
   imports = [
+    ./git.nix
     ./terminal.nix
     ./nvim.nix
   ];

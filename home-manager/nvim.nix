@@ -1,7 +1,9 @@
 { lib, pkgs, ... } : {
   home.packages = with pkgs; [
+    ripgrep
+    xclip
+    fzf
     nixfmt-rfc-style
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     lazygit
   ];
 

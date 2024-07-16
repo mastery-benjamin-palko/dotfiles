@@ -1,9 +1,5 @@
-{ config, pkgs, ...}: let
-  starshipCmd = "${pkgs.starship}/bin/starship";
-in {
-  home.packages = with pkgs; [
-    neofetch
-  ];
+{ config, pkgs, ... }:
+{
 
   programs.zsh = {
     enable = true;
@@ -33,12 +29,21 @@ in {
     };
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git" "gh" "asdf" "bun" "docker" "docker-compose" "kubectl" "yarn" ];
+      plugins = [
+        "git"
+        "gh"
+        "bun"
+        "docker"
+        "docker-compose"
+        "kubectl"
+        "yarn"
+      ];
       theme = "robbyrussell";
     };
     initExtra = ''
       if [ -e /home/benjaminpalko/.nix-profile/etc/profile.d/nix.sh ]; then . /home/benjaminpalko/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-      eval "$(${starshipCmd} init zsh)"
+      . "$HOME/.nix-profile/share/asdf-vm/asdf.sh"
+      . "$HOME/.nix-profile/share/asdf-vm/completions/asdf.bash"
       neofetch
     '';
   };
@@ -48,4 +53,17 @@ in {
       add_newline = false;
     };
   };
+  programs.btop = {
+    enable = true;
+    settings = {
+      theme = "system";
+    };
+  };
+
+  fonts.fontconfig.enable = true;
+  home.packages = with pkgs; [
+    neofetch
+    asdf-vm
+    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+  ];
 }

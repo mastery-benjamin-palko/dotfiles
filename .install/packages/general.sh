@@ -1,7 +1,7 @@
 packagesApt=(
   "flatpak"
   "gcc"
-  "xclip"
+  "xclip" #
   "neofetch" #
   "build-essential"
   "curl"

@@ -23,7 +23,6 @@ configs=(
   "neofetch"
   "nixpkgs"
   "teams-for-linux"
-  "wal"
 )
 
 _symlinkDirs() {

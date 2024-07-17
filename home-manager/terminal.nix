@@ -19,7 +19,6 @@
       up = "docker compose up -d";
       down = "docker compose down";
       clear = "clear && neofetch";
-      pywal = "bash ~/dotfiles/.scripts/change-wallpaper.sh";
       update = "home-manager switch";
       clean = "nix-store --gc";
     };
@@ -71,6 +70,11 @@
       catpuccin-mocha-transparent = builtins.fromJSON (builtins.readFile ./k9s/skins/catpuccin-mocha-transparent.json);
     };
   };
+  programs.pywal.enable = true;
+  xdg.configFile.wal = {
+    source = ../wal;
+    recursive = true;
+  };
 
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
@@ -81,5 +85,10 @@
     azure-cli
     kubelogin
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    (pkgs.writeShellScriptBin "pywal" ''
+      wal -i ~/Pictures/Wallpaper/
+      sleep 0.2
+      gsettings set org.gnome.desktop.background picture-uri-dark "file://$(cat ~/.cache/wal/wal)"
+    '')
   ];
 }

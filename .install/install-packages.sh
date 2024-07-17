@@ -6,6 +6,3 @@ _installPackagesApt "${packagesApt[@]}";
 echo "Installing flatpak packages..."
 _installPackagesFlatpak "${packagesFlatpak[@]}";
 
-echo "Installing brew packages..."
-_installPackagesBrew "${packagesBrew[@]}";
-

@@ -29,16 +29,3 @@ packagesFlatpak=(
   "redisinsight"
 )
 
-packagesBrew=(
-  "zsh-autosuggestions" #
-  "zsh-syntax-highlighting" #
-  "gh" #
-  "lazygit" #
-  "asdf" #
-  "kubernetes-cli" #
-  "azure-cli" #
-  "Azure/kubelogin/kubelogin" #
-  "k9s" #
-  "jesseduffield/lazydocker/lazydocker" #
-)
-

@@ -7,3 +7,4 @@
 # teams-for-linux
 teams-for-linux/*
 !teams-for-linux/config.json
+!teams-for-linux/assets

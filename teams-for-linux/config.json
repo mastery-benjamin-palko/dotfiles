@@ -1,4 +1,8 @@
 {
   "followSystemTheme": true,
-  "optInTeamsV2": true
+  "optInTeamsV2": true,
+  "defaultURLHandler": "firefox",
+  "awayOnSystemIdle": true,
+  "watchConfigFile": true,
+  "customCSSLocation": "/home/benjaminpalko/dotfiles/teams-for-linux/assets/css/mocha.css"
 }

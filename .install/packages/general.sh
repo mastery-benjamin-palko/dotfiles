@@ -35,10 +35,10 @@ packagesBrew=(
   "gh" #
   "lazygit" #
   "asdf" #
-  "kubernetes-cli"
-  "azure-cli"
-  "Azure/kubelogin/kubelogin"
-  "k9s"
-  "jesseduffield/lazydocker/lazydocker"
+  "kubernetes-cli" #
+  "azure-cli" #
+  "Azure/kubelogin/kubelogin" #
+  "k9s" #
+  "jesseduffield/lazydocker/lazydocker" #
 )
 

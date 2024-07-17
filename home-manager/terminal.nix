@@ -59,11 +59,27 @@
       theme = "system";
     };
   };
+  programs.k9s = {
+    enable = true;
+    settings = {
+      ui = {
+        skin = "catpuccin-mocha";
+      };
+    };
+    skins = {
+      catpuccin-mocha = builtins.fromJSON (builtins.readFile ./k9s/skins/catpuccin-mocha.json);
+      catpuccin-mocha-transparent = builtins.fromJSON (builtins.readFile ./k9s/skins/catpuccin-mocha-transparent.json);
+    };
+  };
 
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
     neofetch
     asdf-vm
+    lazydocker
+    kubectl
+    azure-cli
+    kubelogin
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
 }

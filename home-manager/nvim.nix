@@ -4,7 +4,6 @@
     xclip
     fzf
     nixfmt-rfc-style
-    lazygit
   ];
 
   xdg.configFile.nvim = {
@@ -13,6 +12,10 @@
   };
 
   programs.neovim = {
+    enable = true;
+  };
+
+  programs.lazygit = {
     enable = true;
   };
 

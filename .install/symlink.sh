@@ -20,7 +20,6 @@ _symlinkFiles() {
 # dot config
 configs=(
   "home-manager"
-  "k9s"
   "neofetch"
   "nixpkgs"
   "teams-for-linux"

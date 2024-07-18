@@ -67,7 +67,9 @@
     };
     skins = {
       catpuccin-mocha = builtins.fromJSON (builtins.readFile ./k9s/skins/catpuccin-mocha.json);
-      catpuccin-mocha-transparent = builtins.fromJSON (builtins.readFile ./k9s/skins/catpuccin-mocha-transparent.json);
+      catpuccin-mocha-transparent = builtins.fromJSON (
+        builtins.readFile ./k9s/skins/catpuccin-mocha-transparent.json
+      );
     };
   };
   programs.pywal.enable = true;

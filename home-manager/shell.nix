@@ -1,6 +1,14 @@
 { config, pkgs, ... }:
 {
-
+  targets.genericLinux.enable = true;
+  xdg = {
+    enable = true;
+    mime.enable = true;
+    systemDirs.data = [ "${config.home.homeDirectory}/.nix-profile/share/applications" ];
+  };
+  programs.bash = {
+    enable = true;
+  };
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -41,7 +49,6 @@
     };
     initExtra = ''
       if [ -e /home/benjaminpalko/.nix-profile/etc/profile.d/nix.sh ]; then . /home/benjaminpalko/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-      export XDG_DATA_DIRS="/home/skainswo/.nix-profile/share:$XDG_DATA_DIRS"
       . "$HOME/.nix-profile/share/asdf-vm/asdf.sh"
       . "$HOME/.nix-profile/share/asdf-vm/completions/asdf.bash"
       neofetch

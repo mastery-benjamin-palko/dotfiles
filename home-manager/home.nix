@@ -13,6 +13,7 @@ in {
 
   imports = [
     ./git.nix
+    ./messaging.nix
     ./nvim.nix
     ./shell.nix
   ];

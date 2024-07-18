@@ -1,13 +1,8 @@
 packagesApt=(
   "flatpak"
   "gcc"
-  "xclip" #
-  "neofetch" #
   "build-essential"
   "curl"
-  "zsh" #
-  "git" #
-  "neovim" #
   "firefox"
   "google-chrome-stable"
   "pgadmin4"
@@ -18,14 +13,12 @@ packagesApt=(
   "docker-compose-plugin"
   "1password"
   "spotify-client"
-  "gnome-tweaks"
-  "gnome-shell-extension-manager"
-  "teams-for-linux"
+  "gnome-tweaks" #
+  "gnome-shell-extension-manager" #
   "insomnia"
 )
 
 packagesFlatpak=(
-  "slack"
   "redisinsight"
 )
 

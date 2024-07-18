@@ -22,7 +22,6 @@ configs=(
   "home-manager"
   "neofetch"
   "nixpkgs"
-  "teams-for-linux"
 )
 
 _symlinkDirs() {

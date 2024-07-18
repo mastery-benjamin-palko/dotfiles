@@ -5,6 +5,9 @@
   xdg.mime.enable = true;
   programs.bash = {
     enable = true;
+    profileExtra = ''
+      if [ -e /home/benjaminpalko/.nix-profile/etc/profile.d/nix.sh ]; then . /home/benjaminpalko/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+    '';
   };
   programs.zsh = {
     enable = true;

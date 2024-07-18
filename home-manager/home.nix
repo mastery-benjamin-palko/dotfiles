@@ -14,7 +14,7 @@ in {
   imports = [
     ./git.nix
     ./nvim.nix
-    ./terminal.nix
+    ./shell.nix
   ];
 
   # The home.packages option allows you to install Nix packages into your

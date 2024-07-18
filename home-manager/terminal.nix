@@ -41,6 +41,7 @@
     };
     initExtra = ''
       if [ -e /home/benjaminpalko/.nix-profile/etc/profile.d/nix.sh ]; then . /home/benjaminpalko/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+      export XDG_DATA_DIRS="/home/skainswo/.nix-profile/share:$XDG_DATA_DIRS"
       . "$HOME/.nix-profile/share/asdf-vm/asdf.sh"
       . "$HOME/.nix-profile/share/asdf-vm/completions/asdf.bash"
       neofetch

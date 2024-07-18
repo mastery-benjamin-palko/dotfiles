@@ -16,6 +16,7 @@ in {
     ./messaging.nix
     ./nvim.nix
     ./shell.nix
+    ./gtk.nix
   ];
 
   # The home.packages option allows you to install Nix packages into your

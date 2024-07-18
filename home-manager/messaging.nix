@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 {
   home.packages = with pkgs; [
     slack
@@ -13,11 +13,11 @@
   xdg.desktopEntries = {
     "teams-for-linux" = {
       name = "Teams for Linux";
-      settings.StartupWMClass = "teams-for-linux";
-      exec = "teams-for-linux %U";
+      exec = "${config.home.homeDirectory}/.nix-profile/bin/teams-for-linux %U";
       terminal = false;
       type = "Application";
       icon = "teams-for-linux";
+      settings.StartupWMClass = "teams-for-linux";
       comment = "Unofficial Microsoft Teams client for Linux using Electron. It uses the Web App and wraps it as a standalone application using Electron.";
       mimeType = [ "x-scheme-handler/msteams" ];
       categories = [
@@ -31,7 +31,7 @@
       settings.StartupWMClass = "Slack";
       comment = "Slack Desktop";
       genericName = "Slack Client for Linux";
-      exec = "slack %U";
+      exec = "${config.home.homeDirectory}/.nix-profile/bin/slack %U";
       icon = "slack";
       type = "Application";
       startupNotify = true;

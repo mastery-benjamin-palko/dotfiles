@@ -1,11 +1,8 @@
 { config, pkgs, ... }:
 {
   targets.genericLinux.enable = true;
-  xdg = {
-    enable = true;
-    mime.enable = true;
-    systemDirs.data = [ "${config.home.homeDirectory}/.nix-profile/share/applications" ];
-  };
+  xdg.enable = true;
+  xdg.mime.enable = true;
   programs.bash = {
     enable = true;
   };

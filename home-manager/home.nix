@@ -1,10 +1,11 @@
-{ pkgs, ... }: let
-  username = "benjaminpalko";
-in {
+{ pkgs, ... }: let username = "benjaminpalko"; in {
 
   nix = {
     package = pkgs.nix;
-    settings.experimental-features = [ "nix-command" "flakes" ];
+    settings.experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
   };
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -72,7 +73,6 @@ in {
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "24.05"; # Please read the comment before changing.
-
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }

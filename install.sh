@@ -14,16 +14,12 @@ cat <<"EOF"
 EOF
 echo -e "${NONE}"
 
-# package managers
-source .install/brew-install.sh
-
-# package installation
-source .install/install-repositories.sh
-source .install/packages/general.sh
-source .install/install-packages.sh
-
 # config symlinks
 source .install/symlink.sh
+
+# nix setup
+echo "Installing Nix"
+source .install/install-nix.sh
 
 # kubernetes
 source .install/azure-setup.sh
@@ -34,14 +30,11 @@ source .install/setup-development.sh
 # zsh
 source .install/zsh-setup.sh
 
-# Install tools
+# asdf tools
 asdf plugin add nodejs
 asdf plugin add bun
 asdf plugin add yarn
 asdf plugin add python
 asdf plugin add golang
 asdf install
-
-# Pywal
-source .install/install-pywal.sh
 

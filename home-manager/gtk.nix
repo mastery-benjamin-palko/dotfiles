@@ -13,9 +13,7 @@
           control-blur-effect-on-lock-screen.extensionUuid
           mpris-label.extensionUuid
         ];
-        "org/gnome/shell/extensions/user-theme" = {
-          name = "WhiteSur-Dark";
-        };
+        #"org/gnome/shell/extensions/user-theme".name = "WhiteSur-Dark";
       };
     };
   };

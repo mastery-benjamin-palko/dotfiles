@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 {
   home.packages = with pkgs; [
     slack
@@ -6,7 +6,7 @@
   ];
 
   xdg.configFile."teams-for-linux" = {
-    source = ../teams-for-linux;
+    source = lib.file.mkOutOfStoreSymlink ../teams-for-linux;
     recursive = true;
   };
 

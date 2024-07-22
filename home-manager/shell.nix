@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 {
   targets.genericLinux.enable = true;
   xdg.enable = true;
@@ -82,7 +82,11 @@
   };
   programs.pywal.enable = true;
   xdg.configFile.wal = {
-    source = ../wal;
+    source = lib.file.mkOutOfStoreSymlink ../wal;
+    recursive = true;
+  };
+  xdg.configFile.neofetch = {
+    source = lib.file.mkOutOfStoreSymlink ../neofetch;
     recursive = true;
   };
 

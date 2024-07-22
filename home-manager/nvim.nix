@@ -1,4 +1,4 @@
-{ pkgs, ... } : {
+{ lib, pkgs, ... } : {
   home.packages = with pkgs; [
     ripgrep
     xclip
@@ -7,7 +7,7 @@
   ];
 
   xdg.configFile.nvim = {
-    source = ../nvim;
+    source = lib.file.mkOutOfStoreSymlink ../nvim;
     recursive = true;
   };
 

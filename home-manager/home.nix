@@ -1,4 +1,4 @@
-{ pkgs, ... }: let username = "benjaminpalko"; in {
+{ lib, pkgs, ... }: let username = "benjaminpalko"; in {
 
   nix = {
     package = pkgs.nix;
@@ -38,7 +38,7 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
-    ".tool-versions".source = ../.tool-versions;
+    ".tool-versions".source = lib.file.mkOutOfStoreSymlink ../.tool-versions;
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
     #   org.gradle.console=verbose

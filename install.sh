@@ -42,9 +42,6 @@ source .install/azure-setup.sh
 # set up mastery repos
 source .install/setup-development.sh
 
-# zsh
-source .install/zsh-setup.sh
-
 # asdf tools
 asdf plugin add nodejs
 asdf plugin add bun

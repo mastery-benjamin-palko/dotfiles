@@ -33,6 +33,9 @@ source .install/symlink.sh
 # home-manager installation
 source .install/install-home-manager.sh
 
+# docker
+source .install/install-docker.sh
+
 # kubernetes
 source .install/azure-setup.sh
 

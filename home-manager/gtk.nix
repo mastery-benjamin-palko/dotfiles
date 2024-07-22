@@ -6,12 +6,12 @@
       "org/gnome/shell" = {
         disable-user-extensions = false;
         enabled-extensions = with pkgs.gnomeExtensions; [
-          blur-my-shell.extensionUuid
-          user-themes.extensionUuid
-          caffeine.extensionUuid
-          sound-output-device-chooser.extensionUuid
-          control-blur-effect-on-lock-screen.extensionUuid
-          mpris-label.extensionUuid
+          # blur-my-shell.extensionUuid
+          # user-themes.extensionUuid
+          # caffeine.extensionUuid
+          # sound-output-device-chooser.extensionUuid
+          # control-blur-effect-on-lock-screen.extensionUuid
+          # mpris-label.extensionUuid
         ];
         #"org/gnome/shell/extensions/user-theme".name = "WhiteSur-Dark";
       };
@@ -19,12 +19,12 @@
   };
 
   home.packages = with pkgs; [
-    gnome-tweaks
-    gnomeExtensions.user-themes
-    gnomeExtensions.blur-my-shell
-    gnomeExtensions.caffeine
-    gnomeExtensions.sound-output-device-chooser
-    gnomeExtensions.mpris-label
+    # gnome-tweaks
+    # gnomeExtensions.user-themes
+    # gnomeExtensions.blur-my-shell
+    # gnomeExtensions.caffeine
+    # gnomeExtensions.sound-output-device-chooser
+    # gnomeExtensions.mpris-label
   ];
 
   gtk = {

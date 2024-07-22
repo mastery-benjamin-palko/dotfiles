@@ -2,6 +2,13 @@
 
 Installation and setup scripts for environment & apps
 
+
+# Installation
+
+```shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/mastery-benjamin-palko/dotfiles/master/install.sh)"
+```
+
 Start process by running:
 
 ```shell

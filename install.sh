@@ -1,7 +1,6 @@
 #!/bin/bash
 
-source .install/includes/library.sh
-clear
+dotfiles=https://github.com/mastery-benjamin-palko/dotfiles.git
 
 echo -e "${GREEN}"
 cat <<"EOF"
@@ -14,12 +13,25 @@ cat <<"EOF"
 EOF
 echo -e "${NONE}"
 
+# nix setup
+echo "Installing Nix"
+sh <(curl -L https://nixos.org/nix/install) --no-daemon
+source "$HOME"/.bashrc || (echo "Failed to source .bashrc" && exit)
+
+# clone dotfiles
+if [ -d ~/dotfiles ]; then
+	echo "Deleting existing dotfiles"
+	rm -rf ~/dotfiles
+fi
+
+nix-shell -p git --command "git clone ${dotfiles} ~/dotfiles"
+cd ~/dotfiles || (echo "Failed to clone dotfiles" && exit)
+
 # config symlinks
 source .install/symlink.sh
 
-# nix setup
-echo "Installing Nix"
-source .install/install-nix.sh
+# home-manager installation
+source .install/install-home-manager.sh
 
 # kubernetes
 source .install/azure-setup.sh
@@ -37,4 +49,3 @@ asdf plugin add yarn
 asdf plugin add python
 asdf plugin add golang
 asdf install
-

@@ -1,4 +1,8 @@
-{ lib, pkgs, ... }: let username = "benjaminpalko"; in {
+{ config, pkgs, ... }:
+let
+  username = "benjaminpalko";
+in
+{
 
   nix = {
     package = pkgs.nix;
@@ -38,7 +42,7 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
-    ".tool-versions".source = lib.file.mkOutOfStoreSymlink ../.tool-versions;
+    ".tool-versions".source = config.lib.file.mkOutOfStoreSymlink ../.tool-versions;
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
     #   org.gradle.console=verbose
@@ -62,8 +66,7 @@
   #
   #  /etc/profiles/per-user/benjaminpalko/etc/profile.d/hm-session-vars.sh
   #
-  home.sessionVariables = {
-  };
+  home.sessionVariables = { };
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release

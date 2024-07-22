@@ -5,9 +5,6 @@
   xdg.mime.enable = true;
   programs.bash = {
     enable = true;
-    profileExtra = ''
-      if [ -e /home/benjaminpalko/.nix-profile/etc/profile.d/nix.sh ]; then . /home/benjaminpalko/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-    '';
   };
   programs.zsh = {
     enable = true;
@@ -48,7 +45,6 @@
       theme = "robbyrussell";
     };
     initExtra = ''
-      if [ -e /home/benjaminpalko/.nix-profile/etc/profile.d/nix.sh ]; then . /home/benjaminpalko/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
       . "$HOME/.nix-profile/share/asdf-vm/asdf.sh"
       . "$HOME/.nix-profile/share/asdf-vm/completions/asdf.bash"
       neofetch

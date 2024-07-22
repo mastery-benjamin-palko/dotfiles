@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
   targets.genericLinux.enable = true;
   xdg.enable = true;
@@ -58,6 +63,21 @@
     enable = true;
     settings = {
       add_newline = false;
+    };
+  };
+  programs.bun = {
+    enable = true;
+    settings = {
+      install.scopes = {
+        "@mastery" = {
+          token = "$NPM_TOKEN";
+          url = "https://npm.pkg.github.com/";
+        };
+        "@masterysystems" = {
+          token = "$NPM_TOKEN";
+          url = "https://npm.pkg.github.com/";
+        };
+      };
     };
   };
   programs.btop = {

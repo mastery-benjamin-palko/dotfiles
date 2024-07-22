@@ -17,6 +17,7 @@ in
   home.homeDirectory = "/home/${username}";
 
   imports = [
+    ./applications.nix
     ./git.nix
     ./messaging.nix
     ./nvim.nix

@@ -7,7 +7,6 @@ packagesApt=(
   "google-chrome-stable"
   "pgadmin4"
   "1password"
-  "spotify-client"
   "gnome-tweaks" #
   "gnome-shell-extension-manager" #
   "insomnia"

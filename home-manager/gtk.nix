@@ -1,22 +1,22 @@
 { pkgs, ... }:
 {
-  dconf = {
-    enable = true;
-    settings = {
-      "org/gnome/shell" = {
-        disable-user-extensions = false;
-        enabled-extensions = with pkgs.gnomeExtensions; [
-          # blur-my-shell.extensionUuid
-          # user-themes.extensionUuid
-          # caffeine.extensionUuid
-          # sound-output-device-chooser.extensionUuid
-          # control-blur-effect-on-lock-screen.extensionUuid
-          # mpris-label.extensionUuid
-        ];
-        #"org/gnome/shell/extensions/user-theme".name = "WhiteSur-Dark";
-      };
-    };
-  };
+  # dconf = {
+  #   enable = true;
+  #   settings = {
+  #     "org/gnome/shell" = {
+  #       disable-user-extensions = false;
+  #       enabled-extensions = with pkgs.gnomeExtensions; [
+  #         blur-my-shell.extensionUuid
+  #         user-themes.extensionUuid
+  #         caffeine.extensionUuid
+  #         sound-output-device-chooser.extensionUuid
+  #         control-blur-effect-on-lock-screen.extensionUuid
+  #         mpris-label.extensionUuid
+  #       ];
+  #       "org/gnome/shell/extensions/user-theme".name = "WhiteSur-Dark";
+  #     };
+  #   };
+  # };
 
   home.packages = with pkgs; [
     # gnome-tweaks

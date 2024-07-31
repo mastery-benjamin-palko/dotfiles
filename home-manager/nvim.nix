@@ -4,6 +4,7 @@
     curl
     gcc
     ripgrep
+    fd
     xclip
     fzf
     nixfmt-rfc-style

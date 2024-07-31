@@ -50,6 +50,10 @@
       neofetch
     '';
   };
+  programs.tmux = {
+    enable = true;
+    shell = "${pkgs.zsh}/bin/zsh";
+  };
   programs.starship = {
     enable = true;
     settings = {

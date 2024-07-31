@@ -39,10 +39,3 @@ source .install/azure-setup.sh
 # set up mastery repos
 source .install/setup-development.sh
 
-# asdf tools
-asdf plugin add nodejs
-asdf plugin add bun
-asdf plugin add yarn
-asdf plugin add python
-asdf plugin add golang
-asdf install

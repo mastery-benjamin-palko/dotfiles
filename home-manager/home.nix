@@ -20,9 +20,6 @@
     ./nvim.nix
     ./shell.nix
   ];
-  home.file = {
-    ".tool-versions".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.tool-versions";
-  };
 
   # You should not change this value, even if you update Home Manager. If you do
   # want to update the value, then make sure to first check the Home Manager

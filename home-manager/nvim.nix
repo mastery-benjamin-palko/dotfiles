@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 {
   home.packages = with pkgs; [
+    curl
+    gcc
     ripgrep
     xclip
     fzf

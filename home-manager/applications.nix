@@ -4,6 +4,9 @@
     spotify
     vivaldi
     logseq
+    insomnia
+    # redisinsight
+    pgadmin4
   ];
 
   xdg.desktopEntries = {

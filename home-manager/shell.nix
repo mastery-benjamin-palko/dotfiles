@@ -97,11 +97,11 @@
   };
   programs.pywal.enable = true;
   xdg.configFile.wal = {
-    source = config.lib.file.mkOutOfStoreSymlink ../wal;
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/wal";
     recursive = true;
   };
   xdg.configFile.neofetch = {
-    source = config.lib.file.mkOutOfStoreSymlink ../neofetch;
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/neofetch";
     recursive = true;
   };
 

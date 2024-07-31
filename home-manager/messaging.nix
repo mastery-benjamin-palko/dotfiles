@@ -6,7 +6,7 @@
   ];
 
   xdg.configFile."teams-for-linux" = {
-    source = config.lib.file.mkOutOfStoreSymlink ../teams-for-linux;
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/teams-for-linux";
     recursive = true;
   };
 }

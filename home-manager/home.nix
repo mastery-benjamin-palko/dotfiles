@@ -1,7 +1,4 @@
-{ config, pkgs, ... }:
-let
-  username = "benjaminpalko";
-in
+{ username, config, pkgs, ... }:
 {
 
   nix = {

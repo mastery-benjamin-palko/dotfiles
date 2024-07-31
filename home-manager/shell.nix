@@ -50,10 +50,6 @@
       neofetch
     '';
   };
-  programs.tmux = {
-    enable = true;
-    shell = "${pkgs.zsh}/bin/zsh";
-  };
   programs.starship = {
     enable = true;
     settings = {
@@ -108,7 +104,6 @@
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
     neofetch
-    asdf-vm
     lazydocker
     kubectl
     azure-cli

@@ -45,8 +45,6 @@
       theme = "robbyrussell";
     };
     initExtra = ''
-      . "$HOME/.nix-profile/share/asdf-vm/asdf.sh"
-      . "$HOME/.nix-profile/share/asdf-vm/completions/asdf.bash"
       neofetch
     '';
   };

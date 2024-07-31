@@ -7,33 +7,14 @@
     insomnia
     # redisinsight
     pgadmin4
+    azuredatastudio
+    zoom-us
   ];
 
-  xdg.desktopEntries = {
-    spotify = {
-      name = "Spotify";
-      exec = "${config.home.homeDirectory}/.nix-profile/bin/spotify %U";
-      terminal = false;
-      type = "Application";
-      icon = "spotify-client";
-      settings.StartupWMClass = "spotify";
-      mimeType = [ "x-scheme-handler/spotify" ];
-      categories = [
-        "Audio"
-        "Music"
-        "Player"
-        "AudioVideo"
-      ];
-    };
-    logseq = {
-      name = "Logseq";
-      exec = "${config.home.homeDirectory}/.nix-profile/bin/logseq %U";
-      terminal = false;
-      type = "Application";
-      icon = "logseq";
-      settings.StartupWMClass = "logseq";
-      mimeType = [ "x-scheme-handler/logseq" ];
-      categories = [ "Utility" ];
-    };
+  xdg.configFile.azuredatastudio = {
+    source = config.lib.file.mkOutOfStoreSymlink ../azuredatastudio;
+    recursive = true;
   };
+
+  xdg.configFile."zoomus.conf".source = config.lib.file.mkOutOfStoreSymlink ../zoomus.conf;
 }

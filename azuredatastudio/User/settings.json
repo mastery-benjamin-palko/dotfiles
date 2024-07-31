@@ -1,0 +1,776 @@
+{
+    "workbench.editorAssociations": {
+        "*.{sqlplan}": "workbench.editor.executionplan"
+    },
+    "datasource.connectionGroups": [
+        {
+            "name": "Production",
+            "id": "22f25403-fbb9-43e3-934f-f52182103117",
+            "parentId": "C777F06B-202E-4480-B475-FA416154D458",
+            "color": "#6E9B59",
+            "description": ""
+        },
+        {
+            "name": "ROOT",
+            "id": "C777F06B-202E-4480-B475-FA416154D458",
+            "color": "#6E9B59",
+            "description": ""
+        },
+        {
+            "name": "Test",
+            "id": "33acc4f6-2bea-403b-8134-b50d7c018423",
+            "parentId": "C777F06B-202E-4480-B475-FA416154D458",
+            "color": "#A1634D",
+            "description": ""
+        },
+        {
+            "name": "Development",
+            "id": "0d13b7ec-7f6f-424a-a499-0fa275311798",
+            "parentId": "C777F06B-202E-4480-B475-FA416154D458",
+            "color": "#4452A6",
+            "description": ""
+        }
+    ],
+    "datasource.connections": [
+        {
+            "options": {
+                "connectionName": "Averitt",
+                "host": "pfsql-postgres-ave4u-prod.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1715787640,
+                "originalDatabase": "mastery_api",
+                "groupId": "22f25403-fbb9-43e3-934f-f52182103117",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "22f25403-fbb9-43e3-934f-f52182103117",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "0e0a5541-cbef-4454-89c8-b6aa41efe1cd"
+        },
+        {
+            "options": {
+                "connectionName": "Averitt",
+                "host": "pfsql-postgres-ave4u-test.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1717435504,
+                "originalDatabase": "mastery_api",
+                "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "f9a78665-5afc-4c70-bf0f-949569947f5e"
+        },
+        {
+            "options": {
+                "connectionName": "Cargill",
+                "host": "pfsql-postgres-cgl60-prod.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1717515805,
+                "originalDatabase": "mastery_api",
+                "groupId": "22f25403-fbb9-43e3-934f-f52182103117",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "22f25403-fbb9-43e3-934f-f52182103117",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "e69d6aa0-caa4-48d2-b8cf-0de8742e3c68"
+        },
+        {
+            "options": {
+                "connectionName": "Cargill",
+                "host": "pfsql-postgres-cgl60-test.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1717435504,
+                "originalDatabase": "mastery_api",
+                "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "62838df2-c2f9-4c06-a8ff-07df7fb26898"
+        },
+        {
+            "options": {
+                "connectionName": "CAT",
+                "host": "pfsql-postgres-cat7x-prod.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1713194921,
+                "originalDatabase": "mastery_api",
+                "groupId": "22f25403-fbb9-43e3-934f-f52182103117",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "22f25403-fbb9-43e3-934f-f52182103117",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "8e9ce26d-c389-4c63-ae7a-54192b6f8ae2"
+        },
+        {
+            "options": {
+                "connectionName": "CAT",
+                "host": "pfsql-postgres-cat7x-test.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1717435504,
+                "originalDatabase": "mastery_api",
+                "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "9d1fd452-31e6-4202-9d85-77b7e09eb0e0"
+        },
+        {
+            "options": {
+                "connectionName": "Covenant",
+                "host": "pfsql-postgres-co2yt-prod.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1713194921,
+                "originalDatabase": "mastery_api",
+                "groupId": "22f25403-fbb9-43e3-934f-f52182103117",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "22f25403-fbb9-43e3-934f-f52182103117",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "9b509a50-3cdf-41ce-8090-55b20ed22793"
+        },
+        {
+            "options": {
+                "connectionName": "Covenant",
+                "host": "pfsql-postgres-co2yt-test.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1713194921,
+                "originalDatabase": "mastery_api",
+                "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "18209dc5-c4ba-4c9d-9ce0-83e2bbcfae4c"
+        },
+        {
+            "options": {
+                "connectionName": "Dollar General",
+                "host": "pfsql-postgres-dg3nl-test.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1713194921,
+                "originalDatabase": "mastery_api",
+                "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "82917879-6039-40cd-80f7-0c74db1ec1f1"
+        },
+        {
+            "options": {
+                "connectionName": "Evans",
+                "host": "pfsql-postgres-eva9o-test.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1713194921,
+                "originalDatabase": "mastery_api",
+                "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "add886fb-e5dd-4187-b6ab-23f3168a46f4"
+        },
+        {
+            "options": {
+                "connectionName": "Evans",
+                "host": "pfsql-postgres-eva9o-prod.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1713194921,
+                "originalDatabase": "mastery_api",
+                "groupId": "22f25403-fbb9-43e3-934f-f52182103117",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "22f25403-fbb9-43e3-934f-f52182103117",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "44fead81-8736-4704-a745-d823fde69aac"
+        },
+        {
+            "options": {
+                "connectionName": "Hirschbach",
+                "host": "pfsql-postgres-hir3j-test.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1713194921,
+                "originalDatabase": "mastery_api",
+                "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "8216a480-b600-43a8-8222-1aa7f7d6901e"
+        },
+        {
+            "options": {
+                "connectionName": "Hirschbach",
+                "host": "pfsql-postgres-hir3j-prod.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1716402192,
+                "originalDatabase": "mastery_api",
+                "groupId": "22f25403-fbb9-43e3-934f-f52182103117",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "22f25403-fbb9-43e3-934f-f52182103117",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "21bd0144-b757-4e0a-bd61-9e5f1f0036aa"
+        },
+        {
+            "options": {
+                "connectionName": "KDP",
+                "host": "pfsql-postgres-kdp5t-test.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1717080704,
+                "originalDatabase": "mastery_api",
+                "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "74589090-ced1-44ef-907d-d12c63e4e2ba"
+        },
+        {
+            "options": {
+                "connectionName": "KDP",
+                "host": "pfsql-postgres-kdp5t-prod.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1717527963,
+                "originalDatabase": "mastery_api",
+                "groupId": "22f25403-fbb9-43e3-934f-f52182103117",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "22f25403-fbb9-43e3-934f-f52182103117",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "7b149436-9551-4df9-a781-39c0bd5b4353"
+        },
+        {
+            "options": {
+                "connectionName": "Loadsmith",
+                "host": "pfsql-postgres-ls8fm-test.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1716499846,
+                "originalDatabase": "mastery_api",
+                "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "c17637c2-fe7d-48df-a087-a19f38d65d53"
+        },
+        {
+            "options": {
+                "connectionName": "Loadsmith",
+                "host": "pfsql-postgres-ls8fm-prod.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1717515805,
+                "originalDatabase": "mastery_api",
+                "groupId": "22f25403-fbb9-43e3-934f-f52182103117",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "22f25403-fbb9-43e3-934f-f52182103117",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "51bd47b8-b324-4d22-9350-3f371c036967"
+        },
+        {
+            "options": {
+                "connectionName": "Mastery Development",
+                "host": "pfsql-postgres-mm100-dev.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1721070134,
+                "originalDatabase": "mastery_api",
+                "groupId": "0d13b7ec-7f6f-424a-a499-0fa275311798",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "0d13b7ec-7f6f-424a-a499-0fa275311798",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "e1cd1405-fde2-47e4-99b1-73ec9474bdfa"
+        },
+        {
+            "options": {
+                "connectionName": "Mastery Test",
+                "host": "pfsql-postgres-mm100-test.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1716827647,
+                "originalDatabase": "mastery_api",
+                "groupId": "0d13b7ec-7f6f-424a-a499-0fa275311798",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "0d13b7ec-7f6f-424a-a499-0fa275311798",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "e6b23078-d1ab-444b-a903-46f417fda8d8"
+        },
+        {
+            "options": {
+                "connectionName": "Molo",
+                "host": "pfsql-postgres-ml100-prod.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1713194921,
+                "originalDatabase": "mastery_api",
+                "groupId": "22f25403-fbb9-43e3-934f-f52182103117",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "22f25403-fbb9-43e3-934f-f52182103117",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "2a86a77b-bec3-4993-a5a6-211a9d8f09c9"
+        },
+        {
+            "options": {
+                "connectionName": "Molo",
+                "host": "pfsql-postgres-ml100-test.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1713194921,
+                "originalDatabase": "mastery_api",
+                "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "0a6a62e4-3ff5-440e-947d-845d1d3b18b1"
+        },
+        {
+            "options": {
+                "connectionName": "Pepsi",
+                "host": "pfsql-postgres-pep5c-test.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1713194921,
+                "originalDatabase": "mastery_api",
+                "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "e1f5c5ec-451a-4c19-8d31-b0bd4d80f3e6"
+        },
+        {
+            "options": {
+                "connectionName": "Prime",
+                "host": "pfsql-postgres-pr100-test.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1713194921,
+                "originalDatabase": "mastery_api",
+                "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "dc0f0de8-d9a0-463a-af57-55739fed6adb"
+        },
+        {
+            "options": {
+                "connectionName": "Prime",
+                "host": "pfsql-postgres-pr100-prod.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1713194921,
+                "originalDatabase": "mastery_api",
+                "groupId": "22f25403-fbb9-43e3-934f-f52182103117",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "22f25403-fbb9-43e3-934f-f52182103117",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "b09a482c-1d6d-4c0c-9437-e7aaa5be6d3d"
+        },
+        {
+            "options": {
+                "connectionName": "Ruan",
+                "host": "pfsql-postgres-ru100-test.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1713194921,
+                "originalDatabase": "mastery_api",
+                "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "3a7ba63d-3bfa-4a7b-a61b-5a6c7fdcbc7a"
+        },
+        {
+            "options": {
+                "connectionName": "Ruan",
+                "host": "pfsql-postgres-ru100-prod.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1713194921,
+                "originalDatabase": "mastery_api",
+                "groupId": "22f25403-fbb9-43e3-934f-f52182103117",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "22f25403-fbb9-43e3-934f-f52182103117",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "9b597834-fff1-4118-881a-ad44eb8cc2be"
+        },
+        {
+            "options": {
+                "connectionName": "Schneider",
+                "host": "pfsql-postgres-sn100-dev.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1713198314,
+                "originalDatabase": "mastery_api",
+                "groupId": "0d13b7ec-7f6f-424a-a499-0fa275311798",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "0d13b7ec-7f6f-424a-a499-0fa275311798",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "ad44bd3b-9f65-46d6-b27c-818878efe72b"
+        },
+        {
+            "options": {
+                "connectionName": "Schneider",
+                "host": "pfsql-postgres-sn100-test.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1713198314,
+                "originalDatabase": "mastery_api",
+                "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "5cbed34e-360f-4fc2-b6b6-7a8196cec018"
+        },
+        {
+            "options": {
+                "connectionName": "Schneider",
+                "host": "pfsql-postgres-sn100-prod.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1713198314,
+                "originalDatabase": "mastery_api",
+                "groupId": "22f25403-fbb9-43e3-934f-f52182103117",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "22f25403-fbb9-43e3-934f-f52182103117",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "6bde6a8a-577c-4e67-8ce4-57e5a7021466"
+        },
+        {
+            "options": {
+                "connectionName": "TMC",
+                "host": "pfsql-postgres-tm100-test.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1713198314,
+                "originalDatabase": "mastery_api",
+                "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "f903c0b3-6b38-4fbc-bc0e-3348905728af"
+        },
+        {
+            "options": {
+                "connectionName": "TMC",
+                "host": "pfsql-postgres-tm100-prod.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1713198314,
+                "originalDatabase": "mastery_api",
+                "groupId": "22f25403-fbb9-43e3-934f-f52182103117",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "22f25403-fbb9-43e3-934f-f52182103117",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "613ed76e-7a21-40cf-8ae2-6d05df0908b6"
+        },
+        {
+            "options": {
+                "connectionName": "TrailerBridge",
+                "host": "pfsql-postgres-tb100-dev.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1713198314,
+                "originalDatabase": "mastery_api",
+                "groupId": "0d13b7ec-7f6f-424a-a499-0fa275311798",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "0d13b7ec-7f6f-424a-a499-0fa275311798",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "a99de56e-afdc-4fc2-a533-cbd002784a8a"
+        },
+        {
+            "options": {
+                "connectionName": "Trailerbridge",
+                "host": "pfsql-postgres-tb100-prod.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1713198314,
+                "originalDatabase": "mastery_api",
+                "groupId": "22f25403-fbb9-43e3-934f-f52182103117",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "22f25403-fbb9-43e3-934f-f52182103117",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "a221560c-0721-41ad-9a66-204a99f6478f"
+        },
+        {
+            "options": {
+                "connectionName": "Werner",
+                "host": "pfsql-postgres-we100-test.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1713198314,
+                "originalDatabase": "mastery_api",
+                "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "33acc4f6-2bea-403b-8134-b50d7c018423",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "e45a52a2-2084-4e67-92bb-a5837c2135f1"
+        },
+        {
+            "options": {
+                "connectionName": "Werner",
+                "host": "pfsql-postgres-we100-prod.postgres.database.azure.com",
+                "authenticationType": "AzureMFAAndUser",
+                "dbname": "mastery_api",
+                "user": "sg-namespace-carrier-microservice",
+                "password": "",
+                "applicationName": "azdata",
+                "azureTenantId": "0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "azureAccount": "d2c902ba-a38e-4857-ae67-2c0cfab26023.0af189f7-f265-4414-bbd5-35402c9d67c1",
+                "expiresOn": 1713198314,
+                "originalDatabase": "mastery_api",
+                "groupId": "22f25403-fbb9-43e3-934f-f52182103117",
+                "databaseDisplayName": "mastery_api"
+            },
+            "groupId": "22f25403-fbb9-43e3-934f-f52182103117",
+            "providerName": "PGSQL",
+            "savePassword": true,
+            "id": "8d715ee5-3c2a-44d7-84bf-0f0f42527595"
+        }
+    ],
+    "workbench.colorTheme": "Atom One Dark",
+    "mssql.objectExplorer.groupBySchema": false,
+    "[sql]": {
+        "editor.defaultFormatter": "Microsoft.azuredatastudio-postgresql"
+    }
+}

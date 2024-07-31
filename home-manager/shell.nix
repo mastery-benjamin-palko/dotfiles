@@ -78,7 +78,7 @@
   programs.btop = {
     enable = true;
     settings = {
-      theme = "system";
+      color_theme = "TTY";
     };
   };
   programs.k9s = {

@@ -1,3 +1,0 @@
-[install.scopes]
-"@mastery" = { token = "$NPM_TOKEN", url = "https://npm.pkg.github.com/" }
-"@masterysystems" = { token = "$NPM_TOKEN", url = "https://npm.pkg.github.com/" }

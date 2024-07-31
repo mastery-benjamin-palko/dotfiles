@@ -24,11 +24,8 @@ if [ -d ~/dotfiles ]; then
 	rm -rf ~/dotfiles
 fi
 
-nix-shell -p git --command "git clone ${dotfiles} ~/dotfiles"
+nix-shell -p git --command "git clone -b nix ${dotfiles} ~/dotfiles"
 cd ~/dotfiles || (echo "Failed to clone dotfiles" && exit)
-
-# config symlinks
-source .install/symlink.sh
 
 # home-manager installation
 source .install/install-home-manager.sh

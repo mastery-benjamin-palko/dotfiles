@@ -5,5 +5,5 @@ nix-channel --add https://nixos.org/channels/nixos-unstable nixpkgs
 nix-channel --update
 
 nix-shell '<home-manager>' -A install
-home-manager switch
+home-manager switch --flake "$HOME"/dotfiles
 

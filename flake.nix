@@ -2,28 +2,31 @@
   description = "Work Nix Configuration";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs =
     { home-manager, nixpkgs, ... }@inputs:
     let
-      system = if builtins ? currentSystem then builtins.currentSystem else "x86_64-linux";
-      host = builtins.readFile /etc/hostname;
       username = "benjaminpalko";
+      system = "x86_64-linux";
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+        config.permittedInsecurePackages = [ "electron-27.3.11" ];
+      };
     in
     {
-      nixosConfigurations."${host}" = nixpkgs.lib.nixosSystem {
-        inherit system;
-        modules = [
-          home-manager.nixosModules.home-manager
-          ./nix/configuration.nix
-        ];
-        specialArgs = {
+      homeConfigurations."${username}" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        extraSpecialArgs = {
           inherit username;
           inherit inputs;
         };
+        modules = [ ./home-manager/home.nix ];
       };
     };
 }

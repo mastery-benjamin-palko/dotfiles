@@ -24,7 +24,7 @@
       up = "docker compose up -d";
       down = "docker compose down";
       clear = "clear && neofetch";
-      update = "home-manager switch";
+      update = "home-manager switch --flake $HOME/dotfiles";
       clean = "nix-store --gc";
     };
     history = {

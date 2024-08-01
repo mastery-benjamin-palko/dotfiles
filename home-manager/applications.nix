@@ -2,7 +2,9 @@
 {
   home.packages = with pkgs; [
     spotify
-    vivaldi
+    (vivaldi.override {
+      commandLineArgs = "--password-store=gnome-libsecret";
+    })
     logseq
     insomnia
     # redisinsight

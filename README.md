@@ -6,7 +6,8 @@ Installation and setup scripts for environment & apps
 # Installation
 
 ```shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/mastery-benjamin-palko/dotfiles/master/install.sh)"
+sh <(curl -L https://nixos.org/nix/install) --no-daemon
+sh <(curl -L https://raw.githubusercontent.com/mastery-benjamin-palko/dotfiles/master/install.sh)
 ```
 
 After installation restart your session (logout/restart) and then run this script

@@ -1,5 +1,5 @@
 packagesApt=(
-  "firefox"
+  "sway"
   "gnome-tweaks" #
   "gnome-shell-extension-manager" #
 )

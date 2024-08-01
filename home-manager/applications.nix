@@ -10,7 +10,6 @@
     # redisinsight
     pgadmin4
     azuredatastudio
-    zoom-us
   ];
 
   xdg.configFile.azuredatastudio = {

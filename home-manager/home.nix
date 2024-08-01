@@ -19,6 +19,7 @@
     ./messaging.nix
     ./nvim.nix
     ./shell.nix
+    ./wayland.nix
   ];
 
   # You should not change this value, even if you update Home Manager. If you do

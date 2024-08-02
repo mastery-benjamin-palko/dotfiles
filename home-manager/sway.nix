@@ -1,11 +1,23 @@
 { config, pkgs, ... }:
 {
   home.packages = with pkgs; [
+    # CLI File manager
+    ranger
+    # Screenshots
+    slurp
+    grim
+    wl-clipboard
+    # Application Runner
+    rofi-wayland
+    # Device manager
+    kanshi
+    # PRETTY!!!
     swww
-    (pkgs.writeShellScriptBin "pywal" ''
+    (pkgs.writeShellScriptBin "wallpaper" ''
       # -n tells `wal` to skip setting the wallpaper.
-      wal -i ~/Pictures/Wallpapers/ -n
+      wal -i ~/Pictures/Wallpaper/ -n
 
+      sleep 0.8
       # Using feh to tile the wallpaper now.
       # We grab the wallpaper location from wal's cache so
       # that this works even when a directory is passed.
@@ -13,23 +25,43 @@
     '')
   ];
 
-  programs.kitty = {
+  programs.pywal.enable = true;
+  services.kanshi = {
     enable = true;
-    shellIntegration.enableZshIntegration = true;
-    font = {
-      name = "JetBrainsMono NF";
-      size = 11;
-    };
-    settings = {
-      enable_audio_bell = "no";
-      window_margin_width = 4;
-      background_opacity = "0.5";
-      confirm_os_window_close = 0;
-    };
+    settings = [
+      {
+        profile.name = "undocked";
+        profile.outputs = [
+          {
+            criteria = "eDP-1";
+            status = "enable";
+          }
+        ];
+      }
+      {
+        profile.name = "docked";
+        profile.outputs = [
+          {
+            criteria = "eDP-1";
+            status = "disable";
+          }
+          {
+            criteria = "DP-2";
+            status = "enable";
+            mode = "2560x1440@144Hz";
+          }
+        ];
+      }
+    ];
   };
 
   xdg.configFile.sway = {
     source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/sway";
+    recursive = true;
+  };
+
+  xdg.configFile.rofi = {
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/rofi";
     recursive = true;
   };
 }

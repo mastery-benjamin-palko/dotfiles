@@ -89,7 +89,6 @@
       );
     };
   };
-  programs.pywal.enable = true;
   xdg.configFile.wal = {
     source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/wal";
     recursive = true;

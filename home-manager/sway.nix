@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 {
   home.packages = with pkgs; [
+    playerctl
     autotiling
     #swayfx
     # CLI File manager
@@ -57,6 +58,9 @@
         ];
       }
     ];
+  };
+  services.playerctld = {
+    enable = true;
   };
 
   xdg.configFile.sway = {

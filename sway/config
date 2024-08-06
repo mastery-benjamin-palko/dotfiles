@@ -24,6 +24,7 @@ set $menu rofi -show drun
 include /etc/sway/config-vars.d/*
 
 exec swww-daemon
+exec_always pkill waybar; waybar
 exec_always autotiling
 exec_always pkill kanshi; exec kanshi
 
@@ -221,29 +222,6 @@ mode "resize" {
 
 
 include ~/.cache/wal/colors-sway
-
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
-bar {
-    position top
-    gaps 0 0 4 0
-    height 24
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
-
-    colors {
-        statusline $foreground
-        background $background
-        inactive_workspace $color6 $color6 $color7
-        focused_workspace $color1 $color1 $color7
-    }
-
-    tray_padding 2
-}
 
 default_orientation auto
 default_border pixel 4

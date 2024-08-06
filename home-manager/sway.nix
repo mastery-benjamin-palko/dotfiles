@@ -9,6 +9,8 @@
     slurp
     grim
     wl-clipboard
+    # Status bar
+    waybar
     # Application Runner
     rofi-wayland
     # Device manager
@@ -59,6 +61,11 @@
 
   xdg.configFile.sway = {
     source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/sway";
+    recursive = true;
+  };
+
+  xdg.configFile.waybar = {
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/waybar";
     recursive = true;
   };
 

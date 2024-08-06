@@ -2,7 +2,7 @@
 {
   home.packages = with pkgs; [
     autotiling
-    swayfx
+    #swayfx
     # CLI File manager
     ranger
     # Screenshots

@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 {
   home.packages = with pkgs; [
+    autotiling
     # CLI File manager
     ranger
     # Screenshots

@@ -24,6 +24,7 @@ set $menu rofi -show drun
 include /etc/sway/config-vars.d/*
 
 exec swww-daemon
+exec_always autotiling
 exec_always pkill kanshi; exec kanshi
 
 ### Output configuration
@@ -245,7 +246,7 @@ bar {
 }
 
 default_orientation auto
-default_border pixel
+default_border pixel 4
 gaps inner 10
 
 include /etc/sway/config.d/*

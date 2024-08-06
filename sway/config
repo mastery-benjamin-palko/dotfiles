@@ -28,6 +28,16 @@ exec_always pkill waybar; waybar
 exec_always autotiling
 exec_always pkill kanshi; exec kanshi
 
+workspace 1
+  exec spotify
+workspace 2
+  exec teams-for-linux
+  exec slack
+workspace 3
+  exec vivaldi
+workspace 4
+  exec gnome-terminal
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)

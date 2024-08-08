@@ -2,11 +2,9 @@
 {
   home.packages = with pkgs; [
     spotify
-    (vivaldi.override {
-      commandLineArgs = "--password-store=gnome-libsecret";
-    })
+    (vivaldi.override { commandLineArgs = "--password-store=gnome-libsecret"; })
     logseq
-    insomnia
+    (pkgs.callPackage ./pkgs/insomnia.nix { })
     # redisinsight
     pgadmin4
     azuredatastudio
